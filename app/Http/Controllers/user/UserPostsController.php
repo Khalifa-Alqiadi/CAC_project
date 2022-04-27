@@ -48,7 +48,7 @@ class UserPostsController extends Controller
             'model_id'=>'required',
             'name_enige'=>'required',
             'start_price' => "required|regex:/^\d+(\.\d{1,2})?$/|not_regex:/[a-z]/",
-            'auction_price' => "required|regex:/^\d+(\.\d{1,2})?$/|not_regex:/[a-z]/|min:100",
+            'auction_price' => "required|integer|not_regex:/[a-z]/|min:100",
             'address_car' => 'required|string|between:3,50',
             'color'=>'required|not_regex:/[1-9]/',
             'end_date'=>'required|date|after:now',
